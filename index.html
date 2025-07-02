@@ -85,7 +85,40 @@
 
   <!-- Botão para enviar -->
   <button class="enviar" onclick="corrigirQuiz()">Enviar Respostas</button>
+<script>
+  document.getElementById("btnCorrigir").addEventListener("click", corrigirQuiz);
 
+  function corrigirQuiz() {
+    const respostasCorretas = [
+      "ChatGPT",
+      "Gerar textos e responder perguntas",
+      "IA Generativa cria novos conteúdos, enquanto IA Tradicional analisa dados existentes.",
+      "ChatGPT",
+      "IA que analisa e processa dados existentes"
+    ];
+
+    let pontuacao = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      const selecionada = document.querySelector(`input[name="question${i}"]:checked`);
+      if (selecionada && selecionada.value === respostasCorretas[i - 1]) {
+        pontuacao++;
+      }
+    }
+
+    let resultado = "";
+    if (pontuacao <= 2) {
+      resultado = "Você precisa estudar mais sobre Inteligência Artificial.";
+    } else if (pontuacao <= 4) {
+      resultado = "Bom trabalho! Você tem um bom conhecimento sobre Inteligência Artificial.";
+    } else {
+      resultado = "Excelente! Você é um expert em Inteligência Artificial.";
+    }
+
+    document.getElementById("resultadoFinal").innerText =
+      `Você acertou ${pontuacao} de 5. ${resultado}`;
+  }
+</script>
   <!-- Resultado -->
   <p id="resultadoFinal"></p>
 
