@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem sou eu</title>
+    <link rel="stylesheet" href="style.css">
+<</head>
+<body>
+
+  <header>
+    <h1>Quem sou eu:</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sobre Mim</h2>
+      <p>Olá! Meu nome é Murilo Baiocchi ALves Coelho. Sou um estudante de engenharia de software e apaixonado por Inteligência Artificial. Neste quiz, você poderá testar seus conhecimentos sobre IA e suas aplicações.</p>
+    </section>
+
+    <section>
+      <h2>Minhas Habilidades</h2>
+      <ul>
+        <li>Cursando Engenharia de software</li>
+        <li>Experiência com ferramentas como ChatGPT</li>
+        <li>Interesse em tecnologias emergentes</li>
+        <li>Policial Militar de Minas Gerais</li>
+        <li>Bacharelado em Ciências Contábeis</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p>Você pode me encontrar nas redes sociais:</p>
+      <ul>
+        <li><a href="https://www.instagram.com/murilobaiocchi/" target="_blank">Instagram</a></li>
+        <li><a href="tel:+5534988053959" target="_blank">Telefone</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="menu">
+    <button onclick="window.location.href='ia.html'">Sobre a IA</button>
+    <button onclick="window.location.href='resultados.html'">Explicação das respostas</button>
+    <button onclick="window.location.href='index.html'">Quiz</button>
+  </div>
+
+  <button id="btn-topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+
+  <script>
+    // Mostra o botão "voltar ao topo" ao rolar
+    window.addEventListener("scroll", function () {
+      const btn = document.getElementById("btn-topo");
+      if (window.scrollY > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+  </script>
+
+  <div class="menu">
+    <button onclick="window.location.href='ia.html'">Sobre a IA</button>
+    <button onclick="window.location.href='resultados.html'">Explicação das respostas</button>
+    <button onclick="window.location.href='index.html'">Quiz</button>
+  </div>
+
+</body>
+</html>
+
+  
+

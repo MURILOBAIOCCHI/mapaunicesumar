@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Teste seus conhecimentos sobre Inteligência Artificial com este quiz interativo sobre IA, ChatGPT, IA Generativa e muito mais." />
+    <title>Quiz InteligÊncia Artificial</title>
+        <title>Quiz InteligÊncia Artificial</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+  <header>
+    <h1>Quiz Inteligência Artificial</h1>
+  </header>
+
+  <main>
+    <p>&gt; Teste seus conhecimentos sobre Inteligência Artificial com este quiz!</p>
+    <p>&gt; Responda as perguntas abaixo e veja como você se sai.</p>
+  </main>
+
+  <section>
+    <h2>Instruções</h2>
+    <p>Selecione a alternativa correta para cada pergunta. Após responder todas as perguntas, clique no botão "Enviar Respostas" para ver seu resultado.</p>    
+  </section>
+
+  <!-- Quiz -->
+  <section>
+    <h2>Quiz</h2>
+
+    <!-- Pergunta 1 -->
+    <h3>1. Qual dessas ferramentas de IA ganhou destaque por gerar textos, responder perguntas e ajudar na programação?</h3>   
+    <input type="radio" value="ChatGPT" id="chatgpt1" name="question1">
+    <label for="chatgpt1">ChatGPT</label><br>
+    <input type="radio" value="Google" id="google" name="question1">
+    <label for="google">Google</label><br>
+    <input type="radio" value="TikTok" id="tiktok" name="question1">
+    <label for="tiktok">TikTok</label><br>
+    <input type="radio" value="Adobe" id="adobe" name="question1">
+    <label for="adobe">Adobe</label><br><br>
+
+    <!-- Pergunta 2 -->
+    <h3>2. Qual é a principal função do ChatGPT?</h3>
+    <input type="radio" value="Gerar imagens" id="gerar-imagens" name="question2">
+    <label for="gerar-imagens">Gerar imagens</label><br>
+    <input type="radio" value="Gerar textos e responder perguntas" id="gerar-textos" name="question2">
+    <label for="gerar-textos">Gerar textos e responder perguntas</label><br>
+    <input type="radio" value="Criar vídeos" id="criar-videos" name="question2">
+    <label for="criar-videos">Criar vídeos</label><br>
+    <input type="radio" value="Desenvolver jogos" id="desenvolver-jogos" name="question2">
+    <label for="desenvolver-jogos">Desenvolver jogos</label><br><br>
+
+    <!-- Pergunta 3 -->
+    <h3>3. Qual é a principal diferença entre IA Generativa e IA Tradicional?</h3>
+    <input type="radio" value="IA Generativa cria novos conteúdos, enquanto IA Tradicional analisa dados existentes." id="diferenca1" name="question3">
+    <label for="diferenca1">IA Generativa cria novos conteúdos, enquanto IA Tradicional analisa dados existentes.</label><br>
+    <input type="radio" value="IA Generativa é mais rápida que IA Tradicional." id="diferenca2" name="question3">
+    <label for="diferenca2">IA Generativa é mais rápida que IA Tradicional.</label><br>
+    <input type="radio" value="IA Tradicional não pode aprender com novos dados." id="diferenca3" name="question3">
+    <label for="diferenca3">IA Tradicional não pode aprender com novos dados.</label><br>
+    <input type="radio" value="IA Generativa é usada apenas para jogos." id="diferenca4" name="question3">
+    <label for="diferenca4">IA Generativa é usada apenas para jogos.</label><br><br>
+
+    <!-- Pergunta 4 -->
+    <h3>4. Qual é um exemplo de IA Generativa?</h3>
+    <input type="radio" value="ChatGPT" id="chatgpt2" name="question4">
+    <label for="chatgpt2">ChatGPT</label><br>
+    <input type="radio" value="Planilhas Eletrônicas" id="planilhas" name="question4">
+    <label for="planilhas">Planilhas Eletrônicas</label><br>
+    <input type="radio" value="Antivírus" id="antivirus" name="question4">
+    <label for="antivirus">Antivírus</label><br>
+    <input type="radio" value="Navegadores de Internet" id="navegadores" name="question4">
+    <label for="navegadores">Navegadores de Internet</label><br><br>
+
+    <!-- Pergunta 5 -->
+    <h3>5. O que é IA Tradicional?</h3>
+    <input type="radio" value="IA que gera novos conteúdos" id="ia-generativa" name="question5">
+    <label for="ia-generativa">IA que gera novos conteúdos</label><br>
+    <input type="radio" value="IA que analisa e processa dados existentes" id="ia-analitica" name="question5">
+    <label for="ia-analitica">IA que analisa e processa dados existentes</label><br>
+    <input type="radio" value="IA que cria imagens" id="ia-imagens" name="question5">
+    <label for="ia-imagens">IA que cria imagens</label><br>
+    <input type="radio" value="IA que desenvolve jogos" id="ia-jogos" name="question5">
+    <label for="ia-jogos">IA que desenvolve jogos</label><br><br>
+  </section>
+
+  <!-- Botão para enviar -->
+  <button class="enviar" onclick="corrigirQuiz()">Enviar Respostas</button>
+
+  <!-- Resultado -->
+  <p id="resultadoFinal"></p>
+
+  <!-- Tabela de Pontuação -->
+  <section>
+    <h2>Tabela de Pontuação</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Intervalo de Pontuação</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0-2</td>
+          <td>Você precisa estudar mais sobre Inteligência Artificial.</td>
+        </tr>
+        <tr>
+          <td>3-4</td>
+          <td>Bom trabalho! Você tem um bom conhecimento sobre Inteligência Artificial.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Excelente! Você é um expert em Inteligência Artificial.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Respostas -->
+  <section>
+    <h2>Respostas</h2>
+    <details>
+      <summary>Clique para saber as respostas</summary>
+      <ul>
+        <li>1. ChatGPT</li>
+        <li>2. Gerar textos e responder perguntas</li>
+        <li>3. IA Generativa cria novos conteúdos, enquanto IA Tradicional analisa dados existentes.</li>
+        <li>4. ChatGPT</li>
+        <li>5. IA que analisa e processa dados existentes</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- Feedback -->
+  <section>
+    <h2>Feedback</h2>
+    <form>
+      <label for="feedback">Seu feedback:</label><br>
+      <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+      <button type="button" onclick="alert('Obrigado pelo seu feedback!')">Enviar Feedback</button>
+    </form>
+  </section>
+
+  <div class="menu">
+    <button onclick="window.location.href='ia.html'">Sobre a IA</button>
+    <button onclick="window.location.href='resultados.html'">Explicação das respostas</button>
+    <button onclick="window.location.href='sobremim.html'">Sobre mim</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Quiz Inteligência Artificial. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="btn-topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+
+  <script>
+    // Efeito 1: Mostrar botão ao rolar
+    window.addEventListener("scroll", () => {
+      const btn = document.getElementById("btn-topo");
+      btn.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+
+    // Efeito 2: Destacar perguntas ao clique
+    const perguntas = document.querySelectorAll("h3");
+    perguntas.forEach(pergunta => {
+      pergunta.addEventListener("click", () => {
+        pergunta.classList.add("highlight");
+        setTimeout(() => pergunta.classList.remove("highlight"), 800);
+      });
+    });
+  </script>
+</body>
+</html>

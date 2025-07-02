@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Cabeçalho e navegação */
+header {
+  background-color: #111;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  list-style: none;
+}
+
+nav a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #00ffd5;
+}
+
+.conteudo {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+/* Rodapé */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 2em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+/* Estilo para o menu */
+.menu {
+    position: fixed;
+    top: 0;
+    rigth: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+}
+/* Estilo para os botões do menu */
+.menu button {
+    background-color: #00ffcc;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/* Efeito para imagem */
+.centralizada {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* ocupa a tela inteira */
+    }
+/* Efeito tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid #00ffcc;
+}
+fieldset {
+    border: 2px solid #00ffcc;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+button{
+    background-color: #00ffcc;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+ul {
+      list-style-type: '🤖 ';
+      padding-left: 20px;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-right: 10px;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    /* Animações */
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #00ffe5; }
+      100% { text-shadow: 0 0 20px #00ffe5, 0 0 30px #00ffe5; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulseImage {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }

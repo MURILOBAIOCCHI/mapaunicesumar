@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Inteligência Artificial</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Imagem principal -->
+  <div class="centralizada">
+    <img src="./assets/ChatGPT Image 1 de jul. de 2025, 15_28_06.png" alt="Imagem de IA Generativa" />
+  </div>
+
+  <!-- Título -->
+  <h2>O que é Inteligência Artificial?</h2>
+
+  <!-- Conteúdo com animações de entrada -->
+  <section id="conteudo">
+    <p>🧠 A <strong>Inteligência Artificial (IA)</strong> é um ramo da computação que desenvolve sistemas capazes de simular o raciocínio e o comportamento humano. Isso significa que máquinas podem aprender, tomar decisões, resolver problemas e até se comunicar com pessoas — tudo com base em dados e algoritmos.</p>
+
+    <p>📜 Surgiu nos anos 50, com John McCarthy e a conferência de Dartmouth. Desde então, evoluiu de simples algoritmos para redes neurais profundas e IA generativa.</p>
+
+    <p>⚙️ Hoje, a IA está por toda parte:</p>
+    <ul>
+      <li>💬 Chatbots inteligentes (como o ChatGPT)</li>
+      <li>🩺 Diagnóstico médico assistido por IA</li>
+      <li>🚗 Carros autônomos</li>
+      <li>🎨 Geração de imagens, músicas e vídeos</li>
+      <li>🎯 Recomendação de conteúdo em redes sociais</li>
+    </ul>
+
+    <p>🔮 No futuro, veremos IAs ainda mais inteligentes, autônomas e éticas, integradas com robôs, escolas, cidades e até decisões governamentais.</p>
+
+    <p>🤖 Curiosidades: a IA já escreveu livros, criou artes vendidas por milhares de dólares e venceu humanos em jogos complexos como Go.</p>
+  </section>
+
+  <!-- Ícones animados simulando IA ligando -->
+  <div style="text-align: center; margin-bottom: 40px;">
+    <span class="icon" id="icon1">🧠</span>
+    <span class="icon" id="icon2">💡</span>
+    <span class="icon" id="icon3">🔍</span>
+    <span class="icon" id="icon4">🖼️</span>
+    <span class="icon" id="icon5">🤖</span>
+  </div>
+
+  <!-- JavaScript para animar ícones e parágrafos -->
+  <script>
+    // Mostra parágrafos um a um com delay
+    document.addEventListener("DOMContentLoaded", () => {
+      const paragrafos = document.querySelectorAll("#conteudo p, #conteudo ul");
+      paragrafos.forEach((p, i) => {
+        setTimeout(() => {
+          p.style.opacity = 1;
+        }, i * 500);
+      });
+
+      // Ativa ícones em sequência
+      const icons = ["icon1", "icon2", "icon3", "icon4", "icon5"];
+      icons.forEach((id, i) => {
+        setTimeout(() => {
+          document.getElementById(id).style.opacity = 1;
+        }, 2500 + i * 500);
+      });
+    });
+  </script>
+
+  <div class="menu">
+    <button onclick="window.location.href='ia.html'">Sobre a IA</button>
+    <button onclick="window.location.href='index.html'">Quiz</button>
+    <button onclick="window.location.href='sobremim.html'">Sobremim</button>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação das Respostas</title>
+    <link rel="stylesheet" href="style.css">
+   </head>
+
+<body>
+
+  <h1>Explicações das Respostas</h1>
+
+  <section>
+    <h2>Resposta 1</h2>
+    <h3>A ferramenta de IA que ganhou destaque por gerar textos, responder perguntas e ajudar na programação é o ChatGPT.</h3>
+    <button class="btn-toggle" onclick="mostrarUnico(this)">Mostrar Explicação</button>
+    <h4>Explicação</h4>
+    <h5>O ChatGPT é uma ferramenta de inteligência artificial criada para interagir com humanos por meio de linguagem natural. Seu nome vem de “Chat” (conversa) e “GPT” (Generative Pre-trained Transformer), o modelo de IA que o alimenta.
+    Desde o seu lançamento, o ChatGPT se tornou um dos exemplos mais famosos de IA generativa, ganhando espaço em escolas, empresas, serviços e até na vida pessoal de muita gente.</h5>
+  </section>
+
+  <section>
+    <h2>Resposta 2</h2>
+    <h3>A principal função do ChatGPT é gerar textos e responder perguntas.</h3>
+    <button class="btn-toggle" onclick="mostrarUnico(this)">Mostrar Explicação</button>
+    <h4>Explicação</h4>
+    <h5>O ChatGPT é uma ferramenta de inteligência artificial projetada para compreender e gerar linguagem humana com naturalidade. Sua principal função é produzir textos e responder perguntas, atuando como um assistente virtual versátil em diversos contextos. Utilizando modelos avançados de aprendizado de máquina, o ChatGPT consegue conversar com os usuários, elaborar conteúdos criativos e oferecer explicações técnicas ou acessíveis sobre uma infinidade de temas. Isso o tornou popular entre estudantes, profissionais e curiosos que desejam explorar o potencial da IA no dia a dia.</h5>  
+  </section>
+
+  <section>
+    <h2>Resposta 3</h2>
+    <h3>A principal diferença entre IA Generativa e IA Tradicional é que a IA Generativa cria novos conteúdos, enquanto a IA Tradicional analisa dados existentes.</h3>
+    <button class="btn-toggle" onclick="mostrarUnico(this)">Mostrar Explicação</button>
+    <h4>Explicação</h4>
+    <h5>A inteligência artificial tem evoluído em diversas formas, e uma das distinções mais marcantes é entre a IA Generativa e a IA Tradicional. Enquanto a IA Tradicional se concentra em analisar dados existentes para fazer previsões, classificações ou identificar padrões, a IA Generativa vai além: ela é capaz de criar novos conteúdos. Isso inclui textos, imagens, músicas, códigos e muito mais. Essa capacidade criativa da IA Generativa tem revolucionado áreas como educação, design, programação e comunicação, tornando-a uma das frentes mais promissoras da tecnologia atual.</h5>   
+  </section>
+
+  <section>
+    <h2>Resposta 4</h2>
+    <h3>O ChatGPT pode ser usado para criar conteúdo, responder perguntas, ajudar na programação e muito mais.</h3>
+    <button class="btn-toggle" onclick="mostrarUnico(this)">Mostrar Explicação</button>
+    <h4>Explicação</h4>
+    <h5>O ChatGPT é uma das ferramentas mais impressionantes da inteligência artificial moderna, reconhecida por sua habilidade em compreender e gerar linguagem humana com naturalidade. Seu uso vai muito além de simples conversas: ele pode criar conteúdos originais, como textos informativos, histórias e artigos; responder perguntas, oferecendo explicações claras sobre diversos assuntos; e ajudar na programação, seja sugerindo códigos, corrigindo erros ou explicando conceitos técnicos. Essa flexibilidade tem feito do ChatGPT uma presença constante em ambientes educacionais, profissionais e criativos, provando que a IA é uma poderosa aliada no cotidiano.</h5>
+  </section>
+
+  <section>
+    <h2>Resposta 5</h2>
+    <h3>O ChatGPT é uma ferramenta de IA Generativa.</h3>
+    <button class="btn-toggle" onclick="mostrarUnico(this)">Mostrar Explicação</button>
+    <h4>Explicação</h4>
+    <h5>O ChatGPT é uma ferramenta de Inteligência Artificial Generativa, projetada para compreender e produzir linguagem humana de forma natural e eficiente. Ao contrário de sistemas tradicionais que apenas analisam dados, o ChatGPT é capaz de criar conteúdos originais como textos, respostas, códigos e ideias criativas. Isso o torna um exemplo emblemático da nova geração de IA, que combina aprendizado profundo com compreensão contextual, oferecendo suporte em áreas como educação, programação, comunicação e produção de conteúdo. Sua capacidade de aprender com grandes volumes de informação e transformar isso em linguagem útil e acessível o coloca entre as ferramentas mais poderosas e versáteis disponíveis atualmente.</h5>
+  </section>
+
+  <button id="btn-topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+
+  <script>
+    function mostrarUnico(botaoClicado) {
+      const secoes = document.querySelectorAll("section");
+
+      secoes.forEach(secao => {
+        const explicacao = secao.querySelector("h5");
+        const botao = secao.querySelector(".btn-toggle");
+
+        if (botao !== botaoClicado) {
+          explicacao.style.display = "none";
+          botao.textContent = "Mostrar Explicação";
+          secao.classList.remove("highlighted");
+        }
+      });
+
+      const atual = botaoClicado.nextElementSibling.nextElementSibling; // Pula o <h4> e pega o <h5>
+      const visivel = atual.style.display === "block";
+
+      if (!visivel) {
+        atual.style.display = "block";
+        botaoClicado.textContent = "Esconder Explicação";
+        botaoClicado.parentElement.classList.add("highlighted");
+      } else {
+        atual.style.display = "none";
+        botaoClicado.textContent = "Mostrar Explicação";
+        botaoClicado.parentElement.classList.remove("highlighted");
+      }
+    }
+  </script>
+
+  <div class="menu">
+    <button onclick="window.location.href='ia.html'">Sobre a IA</button>
+    <button onclick="window.location.href='index.html'">Quiz</button>
+    <button onclick="window.location.href='sobremim.html'">Sobremim</button>
+  </div>
+</body>
+</html>
+
+
+  
